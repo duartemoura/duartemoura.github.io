@@ -5,7 +5,7 @@ permalink: /projects/
 description: Projects I've worked, and am currently working on
 nav: true
 nav_order: 3
-display_categories: [work, fun, Generative AI, Deep Learning, Computer Vision]
+display_categories: [aws,generative ai, deep learning]
 horizontal: false
 ---
 

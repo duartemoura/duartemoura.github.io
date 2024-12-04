@@ -1,80 +1,29 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: Denoising Autoencoders
+description: Denoising FMNIST and MNIST datasets 
+img: assets/img/dau.png
 importance: 3
-category: fun
+category: deep learning
 ---
+In this project, I implement a denoising autoencoder using PyTorch to reconstruct clean images from noisy inputs. The model is trained on the MNIST and Fashion MNIST (FMNIST) datasets, each comprising 60,000 training images and 10,000 test images of handwritten digits and fashion items, respectively. Each image is 28x28 pixels in grayscale.
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+A denoising autoencoder is a neural network designed to remove noise from data by learning to map noisy inputs to their original, noise-free versions, effectively capturing a robust representation of the data. The architecture consists of two main components:
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+- **Encoder**: Compresses the input image into a lower-dimensional latent representation.
+- **Decoder**: Reconstructs the original image from the latent representation.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+The model is trained to minimize the mean squared error between the reconstructed and original images, enabling it to effectively denoise corrupted inputs.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+<div style="text-align: center;">
+  <img src="/assets/img/dataset_FMNIST_model_Autoencoder3_var_0p01(1).png" alt="Denoising Autoencoder FMNIST Results" width="600">
+  <p><em>Denoising Autoencoder applied to Fashion MNIST (FMNIST) dataset with noise variance of 0.01. The first row shows the original images, the second row shows noisy inputs, and the third row shows reconstructed outputs.</em></p>
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+<div style="text-align: center;">
+  <img src="/assets/img/dataset_MNIST_model_Autoencoder3_var_0p1(2).png" alt="Denoising Autoencoder MNIST Results" width="600">
+  <p><em>Denoising Autoencoder applied to MNIST dataset with noise variance of 0.1. The first row shows the original images, the second row shows noisy inputs, and the third row shows reconstructed outputs.</em></p>
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+You can explore the project's code and detailed report here: [Denoising Autoencoder](https://github.com/duartemoura/generathor)

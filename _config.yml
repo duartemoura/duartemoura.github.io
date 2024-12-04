@@ -113,7 +113,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-Reach out on LinkedIn!
+  Reach out on LinkedIn!
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
 # -----------------------------------------------------------------------------
@@ -639,12 +639,9 @@ jsonresume:
   - basics
   - work
   - education
-  - publications
   - projects
-  - volunteer
-  - awards
   - certificates
   - skills
   - languages
   - interests
-  - references
+
