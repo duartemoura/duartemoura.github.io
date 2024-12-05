@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Calibration CNNs
-description: Implementation of the paper "On calibration of Modern Neural Networks" using bird and cat images of the CIFAR-10 dataset
+description: Implementation of the paper \"On calibration of Modern Neural Networks\"  using bird and cat images of the CIFAR-10 dataset
 img: assets/img/birds_cats.png
 importance: 3
 category: deep learning
